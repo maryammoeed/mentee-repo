@@ -1,5 +1,5 @@
 # Function to calculate the factorial of a number
-def calculate_factorial1(number):
+def calculate_factorial(number):
     if number < 0:
         raise ValueError("Number must be non-negative.")
     factorial = 1
@@ -14,7 +14,7 @@ def read_number_and_calculate_factorial(file_path):
         with open(file_path, 'r') as file:
             number = int(file.read().strip())  # Read the number and strip any extra spaces/newlines
             print(f"Calculating factorial of {number}...")
-            result = calculate_factorial1(number)
+            result = calculate_factorial(number)
             print(f"The factorial of {number} is {result}")
     except FileNotFoundError:
         print(f"Error: The file at {file_path} was not found.")
