@@ -3,7 +3,7 @@ def beautify_text(text: str) -> str:
     A utility function to enhance the appearance of text by capitalizing 
     each word and adding some visual flair.
     """
-    return f"✨ {text.capitalize()} ✨"
+    return f"{text.capitalize()}"
 
 def sort_and_remove_duplicates(words: list) -> list:
     """
@@ -23,7 +23,7 @@ def print_sorted_words(words: list) -> None:
 
     # Iterating through the words and printing them beautifully
     for word in words:
-        print(f"✨ {word.capitalize()} ✨")
+        print(f"{word.capitalize()}")
 
 # Sample list of words with duplicates and unordered
 word_list = [
