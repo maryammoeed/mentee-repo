@@ -1,35 +1,32 @@
-def beautify_text(text: str) -> str:
-    """
-    A utility function to enhance the appearance of text by capitalizing 
-    each word and adding some visual flair.
-    """
-    return f"✨ {text.capitalize()} ✨"
+# Function to calculate the factorial of a number
+def calculate_factorial(number):
+    if number < 0:
+        raise ValueError("Number must be non-negative.")
+    factorial = 1
+    for i in range(1, number + 1):
+        factorial *= i
+    return factorial
 
-def sort_and_remove_duplicates(words: list) -> list:
-    """
-    Sorts the list of words alphabetically and removes duplicates.
-    """
-    return sorted(set(words))
+# Function to read a number from a file and calculate its factorial
+def read_number_and_calculate_factorial(file_path):
+    try:
+        # Read number from the file
+        with open(file_path, 'r') as file:
+            number = int(file.read().strip())  # Read the number and strip any extra spaces/newlines
+            print(f"Calculating factorial of {number}...")
+            result = calculate_factorial(number)
+            print(f"The factorial of {number} is {result}")
+    except FileNotFoundError:
+        print(f"Error: The file at {file_path} was not found.")
+    except ValueError as e:
+        print(f"Error: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
-def print_sorted_words(words: list) -> None:
-    """
-    Prints the sorted and unique words in a visually appealing format.
-    """
-    print("\nHere are the unique and sorted words in style:\n")
-    
-    # Beautifying the header
-    print(beautify_text("Sorted and Unique Words"))
-    print("-" * 40)
+# Main function to execute the code
+def main():
+    file_path = "number.txt"  # Path to the file containing a number
+    read_number_and_calculate_factorial(file_path)
 
-    # Iterating through the words and printing them beautifully
-    for word in words:
-        print(f"✨ {word.capitalize()} ✨")
-
-# Sample list of words with duplicates and unordered
-word_list = [
-    "apple", "banana", "Orange", "grape", "Apple", "banana", "Peach", "grape", "pear"
-]
-
-# Removing duplicates, sorting the list and printing the result
-sorted_unique_words = sort_and_remove_duplicates(word_list)
-print_sorted_words(sorted_unique_words)
+if __name__ == "__main__":
+    main()
