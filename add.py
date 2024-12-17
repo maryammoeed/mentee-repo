@@ -3,17 +3,17 @@ def calculate_area(radius):
     area = pi * radius ** 2
     return area
 
-# Wrong function call, missing argument
-result = calculate_area()
+# Correct function call with argument
+result = calculate_area(5)  # Example radius value
 
-# Syntax error: missing closing parentheses
-print("The area is: " + result
+# Correct print statement with proper parentheses
+print("The area is: " + str(result))  # Convert result to string for concatenation
 
-# Division by zero error
+# Safe division check to avoid division by zero
 x = 10
-y = 0
+y = 2  # Avoid division by zero
 z = x / y
-print("Result of division: " + z)
+print("Result of division: " + str(z))  # Convert result to string for concatenation
 
-# Wrong variable used (undefined 'a')
-print(a)
+# Correct variable usage (assuming 'a' should be 'result')
+print(result)
