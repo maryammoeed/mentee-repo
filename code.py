@@ -1,4 +1,3 @@
-#Libraries
 import math
 import json
 import logging
