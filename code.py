@@ -14,7 +14,7 @@ def factorial(n: int) -> int:
         result *= i
     return result
 
-def fibonacci(n: int) -> int:
+fibonacci(n: int) -> int:
     """Returns the nth Fibonacci number."""
     if n <= 0:
         logging.warning(f"Fibonacci function received an invalid value {n}.")
