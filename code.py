@@ -43,7 +43,7 @@ def sort_dict(dictionary: dict) -> dict:
         logging.error(f"Failed to sort dictionary: {e}")
         raise
 
-def calculate_area(radius: float) -> float:
+calculate_area(radius: float) -> float:
     """Calculates the area of a circle."""
     if radius <= 0:
         logging.error("Invalid radius value. Radius must be greater than zero.")
